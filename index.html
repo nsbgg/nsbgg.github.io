@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <script defer src="app.js"></script>
+    <script src="components/xp-window.js" defer></script>
+    <script src="components/desktop-shortcut.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meine GitHub Startseite - Windows XP Stil</title>
+  </head>
+  <body class="windows-xp">
+    <div class="desktop">
+      <desktop-shortcut
+        icon="img/icon/computer.png"
+        title="Mein Computer"
+        window-id="window-computer"></desktop-shortcut>
+      <desktop-shortcut
+        icon="img/icon/bin_empty.png"
+        title="Papierkorb"
+        window-id="window-bin"></desktop-shortcut>
+      <desktop-shortcut
+        icon="img/icon/github.png"
+        title="GitHub"
+        window-id="window-projects"></desktop-shortcut>
+    </div>
+
+    <xp-window window-id="window-projects">
+      <div class="xp-window-header">
+        <h1>Welcome to my GitHub page</h1>
+      </div>
+      <div class="xp-window-content">
+        <p>
+          Guude and hello. My name is nsbgg and this is my GitHub page. I am a
+          software developer with a passion for creating creative solutions.
+        </p>
+        <ul style="text-align: left">
+          <li><strong>GitHub:</strong> This starting window.</li>
+          <li>
+            <strong>Bin:</strong> Not yet implemented. There is no trash yet.
+          </li>
+          <li>
+            <strong>My Computer:</strong> The device is in my posession and is
+            not usable by anybody else.
+          </li>
+        </ul>
+        <p>Thank you for visiting!</p>
+      </div>
+    </xp-window>
+
+    <xp-window window-id="window-computer" started="false">
+      <div class="xp-window-header">
+        <h1>Mein Computer</h1>
+      </div>
+      <div class="xp-window-content">
+        <p>Hier können Sie Ihre Dateien und Ordner verwalten.</p>
+      </div>
+    </xp-window>
+
+    <xp-window window-id="window-bin" started="false">
+      <div class="xp-window-header">
+        <h1>Papierkorb</h1>
+      </div>
+      <div class="xp-window-content">
+        <p>Hier sind Ihre gelöschten Dateien.</p>
+      </div>
+    </xp-window>
+
+    <footer class="xp-header">
+      <div class="xp-start-bar">
+        <div class="xp-start-button">
+          <img src="img/logo.png" alt="Logo" />
+          Start
+        </div>
+        <div class="xp-taskbar">
+          <!-- <span>Willkommen, nsbgg</span> -->
+        </div>
+        <div class="xp-taskbar-clock" id="taskbar-clock"></div>
+      </div>
+    </footer>
+  </body>
+</html>
