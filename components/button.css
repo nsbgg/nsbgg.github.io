@@ -1,0 +1,99 @@
+xp-button {
+  --color-dark: color-mix(in srgb, var(--xp-button-color), black 30%);
+
+  width: calc(fit-content - 8px);
+  height: calc(1.5rem - 8px);
+  padding: 0.5rem 1rem;
+
+  border-radius: var(--xp-button-radius, 0.5rem);
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* box-shadow: inset 0px -5px 7.699999809265137px 0px rgba(0, 0, 0, 0.5),
+  0px 0px 0px 1px rgba(0, 0, 0, 0.5); */
+
+  background: linear-gradient(
+    to top,
+    var(--xp-button-color) 0%,
+    var(--color-dark) 100%
+  );
+}
+
+xp-button::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+
+  border-radius: var(--xp-button-radius, 0.5rem);
+
+  z-index: -1;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  background: linear-gradient(
+    to bottom,
+    var(--xp-button-color) 0%,
+    var(--color-dark) 100%
+  );
+}
+
+xp-button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  z-index: 1;
+  border-radius: var(--xp-button-radius, 0.5rem);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    var(--xp-button-color) 0%,
+    var(--color-dark) 100%
+  );
+}
+
+xp-button > * {
+  font-size: 2em;
+  font-weight: 600;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: 2;
+
+  background: linear-gradient(
+    to top,
+    var(--xp-button-color) 0%,
+    var(--color-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+
+xp-button > *::before {
+  content: "Test";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  color: rgba(0, 0, 0, 0.35);
+  mix-blend-mode: plus-darken;
+  text-shadow: 0px 0.5px 0px rgba(255, 255, 255, 0.3);
+}
+xp-button > *::after {
+  content: "Test";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  background: linear-gradient(
+    to top,
+    var(--xp-button-color) 0%,
+    var(--color-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}

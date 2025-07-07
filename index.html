@@ -6,6 +6,7 @@
     <link rel="icon" href="img/logo.png" type="image/png" />
     <script defer src="app.js"></script>
     <script src="components/element.js" defer></script>
+    <script src="components/button.js" defer></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My GitHub home page - Windows XP style</title>
@@ -72,11 +73,45 @@
 
     <footer class="xp-header">
       <div class="xp-start-bar">
-        <div class="xp-start-button">
-          <img src="img/logo.png" alt="Logo" />
-          Start
+        <div class="xp-start-button xp-button">
+          <!-- <img src="img/logo.png" alt="Logo" /> -->
+          <!-- <svg
+            width="401"
+            height="350"
+            viewBox="0 0 401 350"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.999969 -0.00409698V249.996C25.9999 249.996 51 224.996 51 199.996V79.9959L166 249.996C191 249.996 216 224.996 216 199.996V49.996H291C369 49.996 369 149.996 291 149.996H266V199.996L291 200C369 200 369 300 291 300L0.969482 299.996C0.969482 325 26 350 50.9999 350H291C412 350 427 220 366 174.996C427 129 412 -0.00409698 291 -0.00409698H216C191 -0.00409698 166 24.9959 166 49.996V169.996L51 -0.00409698H0.999969Z"
+              fill="url(#logo-gradient)" /> -->
+          <svg
+            width="380"
+            height="380"
+            viewBox="0 0 380 380"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0 0V250H60.0143V120H80V250H220V120H320V140H240V250H320V270H0V380H380V0H160V130H140V0H0Z"
+              fill="url(#logo-gradient)" />
+            <lineargradient id="logo-gradient" x2="0.35" y2="1">
+              <stop
+                offset="0%"
+                stop-color="color-mix(in srgb, var(--xp-color-dark), black 30%)" />
+              <stop offset="100%" stop-color="var(--xp-color-dark)" />
+            </lineargradient>
+          </svg>
+
+          <p>Start</p>
+          <!-- Start -->
         </div>
-        <div class="xp-taskbar"></div>
+        <!-- <xp-button border-radius="50" xp-color="#9FD57B">
+          <p>Test</p>
+        </xp-button> -->
+        <div class="xp-taskbar">
+          <!-- <xp-button border-radius="50" xp-color="#9FD57B"
+            ><p>Test</p>
+          </xp-button> -->
+        </div>
         <div class="xp-taskbar-clock" id="taskbar-clock"></div>
       </div>
     </footer>
